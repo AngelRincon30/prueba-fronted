@@ -1,8 +1,5 @@
-import { ReadingListView } from '../view/ReadingList'
+import { ReadingListView } from "../view/ReadingList";
 
 export const ReadingListPage = () => {
-
-  return (
-      <ReadingListView />
-  )
-}
+  return <ReadingListView />;
+};

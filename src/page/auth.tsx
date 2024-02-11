@@ -1,7 +1,5 @@
-import { AuthViewView } from '../view/Auth'
+import { AuthViewView } from "../view/Auth";
 
 export const AuthPage = () => {
-  return (
-    <AuthViewView />
-  )
-}
+  return <AuthViewView />;
+};

@@ -1,8 +1,5 @@
-import { LibraryBookView } from '../view/LibraryBook'
+import { LibraryBookView } from "../view/LibraryBook";
 
 export const LibraryBookPage = () => {
-
-  return (
-      <LibraryBookView />
-  )
-}
+  return <LibraryBookView />;
+};
