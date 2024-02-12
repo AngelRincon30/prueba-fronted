@@ -68,6 +68,12 @@ export const useHandlersList = () => {
     },
     [myPersonLibraryBook],
   );
+ //Barra de busqueda filtra en base a un string en el array 
+ const searchItems = (query: string) => {
+  const NewArray =  data?.default?.library?.filter(x => x?.book?.title?.toLowerCase().includes(query.toLowerCase()))
+  console.log(NewArray)
+  setListBook(NewArray)
+}
 
   return {
     gender,
@@ -78,5 +84,6 @@ export const useHandlersList = () => {
     setMyPersonLibraryBook,
     handleBooks,
     handleDelete,
+    searchItems
   };
 };

@@ -10,8 +10,8 @@ export const SelectComponent = ({
   options: any[];
 }) => {
   return (
-    <div className="mx-auto w-64">
-      <Select options={options} onChange={onChange} value={value} />
+    <div className="w-full md:w-1/3 ">
+      <Select options={options} onChange={onChange} value={value} className="block w-full"/>
     </div>
   );
 };

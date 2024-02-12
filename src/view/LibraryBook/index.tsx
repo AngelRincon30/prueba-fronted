@@ -1,6 +1,7 @@
 import { HeaderComponent } from "../../common/Header";
 import { SelectComponent } from "../../common/Select";
 import { useHandlersList } from "./hook/useHandlersList";
+import { SearchBar } from '../../common/SearchBar/index';
 
 export const LibraryBookView = () => {
   const {
@@ -11,6 +12,7 @@ export const LibraryBookView = () => {
     handleChange,
     handleBooks,
     handleDelete,
+    searchItems
   } = useHandlersList();
 
   return (
@@ -18,15 +20,16 @@ export const LibraryBookView = () => {
       <HeaderComponent />
       <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 sm:py-8 lg:max-w-7xl lg:px-8">
-          <div className=" flex space-x-2 text-base space-x-56 min-w-full mx-auto ">
+          <div className="lg:flex flex-wrap   flex justify-between text-base  min-w-full mx-auto md:max-xl:flex gap-y-1 ">
             <h2 className="text-2xl font-bold tracking-tight text-gray-900">
               Listado del paginado de la libreria
             </h2>
-            <SelectComponent
+              <SelectComponent
               value={gender?.find((x) => x?.value === valueGender)}
               options={gender}
               onChange={(e) => handleChange(e.value)}
-            />
+                />
+              <SearchBar onClick={searchItems} />
           </div>
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             {listBook?.map((listBooks: any, i: number) => {
